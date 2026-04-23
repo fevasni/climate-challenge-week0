@@ -23,7 +23,8 @@ source .venv/bin/activate  # macOS/Linux
 # Install dependencies
 pip install -r requirements.txt
 
-2. Git Identity Configuration
+
+### 2. Git Identity Configuration
 Run these once per machine to ensure your commits are tracked:
 
 ```bash
@@ -40,3 +41,14 @@ git config --global init.defaultBranch main
 | `tests/` | Pytest suite for quality assurance |
 | `.github/` | CI/CD workflow configurations |
 | `.gitignore` | Files Git should not track (e.g., `.venv`)
+
+
+🤖 Continuous Integration (CI)
+
+This project uses GitHub Actions. Every push triggers:
+
+Linting: Code style check via flake8.
+
+Testing: Automated tests via pytest.
+
+Note: PRs cannot be merged if the CI pipeline fails.
